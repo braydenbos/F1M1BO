@@ -1,6 +1,7 @@
 import time
 from os import system, name
 import random
+from PIL import Image
 
 def clear():
     if name == "nt":
@@ -8,9 +9,19 @@ def clear():
     else:
         _=system("clear")
 
+eind1=0
+eind2='niet gehaald'
+eind3='niet gehaald'
+eind4='niet gehaald'
+eind5='niet gehaald'
+eind6='niet gehaald'
 leven=1
 kans=1
 stemmen=0
+
+def menu():
+    print(str(eind1)+" keer dood gegaan\nNederland einde1 "+eind2+"\nNederland einde2 "+eind3+"\nSlechte baas "+eind4+"\nBoer einde "+eind5+"\nBeste einde "+eind6)
+    time.sleep(1)
 
 def stem():
     print("Je bent een kandidaat")
@@ -33,10 +44,14 @@ def vraag1():
     stemmen=0
     kans=1
     clear()
+    print("Je kan op elk moment M invullen bij een vraag om naar de eindingen te kijken die je hebt gehaalt")
     print("je bent net wakker en je hoort een explosie naast je wat ga je doen.\nA. rennen\nB. je blijft staan\nC. je gaat verstoppen")
     v1=input()
     if v1=='A':
         vraag2()
+    elif v1=='M':
+        menu()
+        vraag1()
     elif v1=='B'or'C':
         print("er is een bom op je huis geland\nEn je hebt het niet overleefd")
         dood()
@@ -53,6 +68,9 @@ def vraag2():
         vraag4()
     elif v2=='C':
         vraag5()
+    elif v2=='M':
+        menu()
+        vraag2()
     else:
         print("incorrect input")
         vraag2()
@@ -65,6 +83,9 @@ def vraag3():
     elif v3=='2':
         print("het is misschien een kleine boot maar")
         vraag7()
+    elif v3=='M':
+        menu()
+        vraag3()
     else:
         print("incorrect input")
         vraag3()
@@ -80,6 +101,9 @@ def vraag4():
         dood()
     elif v4=='C':
         vraag8()
+    elif v4=='M':
+        menu()
+        vraag4()
     else:
         print("incorrect input")
         vraag4()
@@ -94,6 +118,9 @@ def vraag5():
         vraag9()
     elif v5=='C':
         vraag10()
+    elif v5=='M':
+        menu()
+        vraag5()
     else:
         print("incorrect input")
         vraag5()
@@ -109,6 +136,9 @@ def vraag6():
         dood()
     elif v6=='C':
         vraag11()
+    elif v6=='M':
+        menu()
+        vraag6()
     else:
         print("incorrect input")
         vraag6()
@@ -120,8 +150,10 @@ def vraag7():
         print("Je bent naar een museum gegaan en hebt veel van de cultuur geleerd ook heb je wat mensen ontmoet")
         einden1()
     elif v7=='B':
-        print("Je bent naar een bar gegaan en ookal kan je de taal niet heb je het nog steeds leuk\nnadat je uit de bar komt komt er iemand naar je toe hij vraagt je om geld ")
         vraag12()
+    elif v7=='M':
+        menu()
+        vraag7()
     else:
         print("incorrect input")
         vraag7()
@@ -136,6 +168,9 @@ def vraag8():
         vraag13()
     elif v8=='C':
         vraag5()
+    elif v8=='M':
+        menu()
+        vraag8()
     else:
         print("incorrect input")
         vraag8()
@@ -152,6 +187,9 @@ def vraag9():
         vraag10()
     elif v9=='C':
         vraag14()
+    elif v9=='M':
+        menu()
+        vraag9()
     else:
         print("incorrect input")
         vraag9()
@@ -165,16 +203,95 @@ def vraag10():
         vraag16()
     elif v10=='C':
         vraag17()
+    elif v10=='M':
+        menu()
+        vraag10()
     else:
         print("incorrect input")
         vraag10()
 
+def vraag11():
+    print("Je hebt een goede verstop plaats gevonden en je wordt niet gevonden\nNa een tijdje hoor je niets meer wat ga je doen\nA. ga zoeken voor de kapitein\nB. wacht tot iedereen weg is\nC. sneak attack")
+    v11=input()
+    if v11=='A':
+        print("Nadat je de kapitein hebt gevonden zijn jullie bijden naar nederland gegaan")
+        vraag7()        
+    elif v11=='B':
+        print("Iedereen is weg maar ook de kapitein dus je zit vast op de boot\nen na een paar dagen ga je van het dek en verdrink je")
+        dood()
+    elif v11=='C':
+        print("Je valt de piraten aan en wordt dood geschoten")
+        dood()
+    elif v11=='M':
+        menu()
+        vraag11()
+    else:
+        print("incorrect input")
+        vraag11()
+
+def vraag12():
+    print("Je bent naar een bar gegaan en ookal kan je de taal niet heb je het nog steeds leuk\nnadat je uit de bar komt komt er iemand naar je toe hij vraagt je om geld\nA. geef je geld\nB. val hem aan")
+    v12=input()
+    if v12=='A':
+        print("Je hebt geen geld dus je word neer geschoten")
+        dood()        
+    elif v12=='B':
+        print("Je hebt hem aangevallen en bent weg gaan rennen\n na een tijdje zie je hem niet meer en ben je veilig weg")
+        einden1()
+    elif v12=='M':
+        menu()
+        vraag12()
+    else:
+        print("incorrect input")
+        vraag12()
+
+def vraag13():
+    print("Je hebt een afleiding gemaakt en word naar een gevangenis gebracht maar je hebt wel de persoon gered\nNa een paar dagen heb je meerdere ontsnappings plannen maar welke ga je kiezen?\nA. ga va het gat\nB. ga graven onder de muur\nC. ga over het hek ")
+    v12=input()
+    if v12=='A':
+        vraag18()        
+    elif v12=='M':
+        menu()
+        vraag13()
+    elif v12=='B'or'C':
+        print("Je bent gesnapt en neergeschoten")
+        dood()
+    else:
+        print("incorrect input")
+        vraag13()
+
+def vraag13():
+    print("Je hebt een afleiding gemaakt en word naar een gevangenis gebracht maar je hebt wel de persoon gered\nNa een paar dagen heb je meerdere ontsnappings plannen maar welke ga je kiezen?\nA. ga va het gat\nB. ga graven onder de muur\nC. ga over het hek ")
+    v12=input()
+    if v12=='A':
+        vraag18()        
+    elif v12=='M':
+        menu()
+        vraag13()
+    elif v12=='B'or'C':
+        print("Je bent gesnapt en neergeschoten")
+        dood()
+    else:
+        print("incorrect input")
+        vraag13()
+
+def einden1():
+    print("Na een paar jaar heb je in Nederland een familie gemaakt en leef je een leuk leven")
+    eind2='gehaald'
+
 def dood():
     restart=input("opnieuw spelen? Y/N: ")
+    eind1=+1
     if restart=='Y':
         vraag1()
     elif restart=='N':
+        print("Nee")
+        image = Image.open('C:\\Users\\bosbr\\OneDrive\\Afbeeldingen\\obama.PNG')
+        image.show()
         leven = 0
+    elif restart=='M':
+        menu()
+        vraag1()
     else:
         print("incorrect input")
         dood()
