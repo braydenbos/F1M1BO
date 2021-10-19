@@ -1,3 +1,4 @@
+#Imports
 import time
 from os import system, name
 import random
@@ -8,6 +9,7 @@ def clear():
     else:
         _=system("clear")
 
+#Variable junk
 eind1=0
 eind2='niet gehaald'
 eind3='niet gehaald'
@@ -19,10 +21,12 @@ leven=1
 kans=0
 stemmen=0
 
-def menu(eind1, eind2, eind3, eind4, eind5, eind6):
-    print(str(eind1)+" keer dood gegaan\nNederland einde1 "+eind2+"\nNederland einde2 "+eind3+"\nSlechte baas "+eind4+"\nBoer einde "+eind5+"\nBaas einde "+eind6)
+#Menu
+def menu(e1,e2,e3,e4,e5,e6):
+    print(str(e1)+" keer dood gegaan\nNederland einde1 "+e2+"\nNederland einde2 "+e3+"\nSlechte baas "+e4+"\nBoer einde "+e5+"\nBaas einde "+e6)
     verder=input()
 
+#Stem
 def stem():
     print("Je bent een kandidaat")
     if kans==0:
@@ -39,7 +43,7 @@ def stem():
     elif stemmen<50:
         vraag19()
 
-
+#vragen
 def vraag1():
     stemmen=0
     kans=1
@@ -50,17 +54,17 @@ def vraag1():
     if v1=='A':
         vraag2()
     elif v1=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag1()
     elif v1=='B'or'C':
-        print("er is een bom op je huis geland\nEn je hebt het niet overleefd")
+        print("Er is een bom op je huis geland\nEn je hebt het niet overleefd")
         dood()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag1()
 
 def vraag2():
-    print("je hoort een explosie naast je maar je overleeft het wel\nJe denkt snel na en weet dat het niet veilig is waar ga je naar toe.\nA. naar de zee\nB. naar het vliegveld\nC. naar een safe house")
+    print("Je hoort een explosie naast je maar je overleeft het wel\nJe denkt snel na en weet dat het niet veilig is waar je nu bent\nDus waar ga je naar toe.\nA. naar de zee\nB. naar het vliegveld\nC. naar een safe house")
     v2=input()
     if v2=='A':
         vraag3()
@@ -69,10 +73,10 @@ def vraag2():
     elif v2=='C':
         vraag5()
     elif v2=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag2()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag2()
 
 def vraag3():
@@ -84,10 +88,10 @@ def vraag3():
         print("het is misschien een kleine boot maar")
         vraag7()
     elif v3=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag3()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag3()
 
 def vraag4():
@@ -102,10 +106,10 @@ def vraag4():
     elif v4=='C':
         vraag8()
     elif v4=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag4()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag4()
 
 def vraag5():
@@ -119,10 +123,10 @@ def vraag5():
     elif v5=='C':
         vraag10()
     elif v5=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag5()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag5()
 
 def vraag6():
@@ -137,10 +141,10 @@ def vraag6():
     elif v6=='C':
         vraag11()
     elif v6=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag6()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag6()
 
 def vraag7():
@@ -152,10 +156,10 @@ def vraag7():
     elif v7=='B':
         vraag12()
     elif v7=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag7()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag7()
 
 def vraag8():
@@ -169,10 +173,10 @@ def vraag8():
     elif v8=='C':
         vraag5()
     elif v8=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag8()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag8()
 
 def vraag9():
@@ -188,26 +192,26 @@ def vraag9():
     elif v9=='C':
         vraag14()
     elif v9=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag9()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag9()
 
 def vraag10():
     print("Iedereen gaat stemmen wie de baas wordt van de bunker wordt wat ga je doen?\nA. word een kandidaat\nB. doe niets\nC. stem voor wie jij denkt ")
     v10=input()
     if v10=='A':
-        stem(kans)        
+        stem()        
     elif v10=='B':
         vraag16()
     elif v10=='C':
         vraag17()
     elif v10=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag10()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag10()
 
 def vraag11():
@@ -223,10 +227,10 @@ def vraag11():
         print("Je valt de piraten aan en wordt dood geschoten")
         dood()
     elif v11=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag11()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag11()
 
 def vraag12():
@@ -239,10 +243,10 @@ def vraag12():
         print("Je hebt hem aangevallen en bent weg gaan rennen\n na een tijdje zie je hem niet meer en ben je veilig weg")
         einden2()
     elif v12=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag12()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag12()
 
 def vraag13():
@@ -251,13 +255,13 @@ def vraag13():
     if v13=='A':
         vraag18()        
     elif v13=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag13()
     elif v13=='B'or'C':
         print("Je bent gesnapt en neergeschoten")
         dood()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag13()
 
 def vraag14():
@@ -267,14 +271,14 @@ def vraag14():
         print("De groep vindt dat je weg moet")
         dood()        
     elif v14=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag14()
     elif v14=='B':
         print("Goed gezet?")
         kans=2
         vraag10()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag14()
 
 def vraag15():
@@ -284,12 +288,12 @@ def vraag15():
         print("Ook al waren jullie met minder man\nJullie hebben alsnog gewonnen\nJe bent later de president geworden en je leeft een goed leven ")
         einden6()        
     elif v15=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag15()
     elif v15=='B'or'C':
         vraag20()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag15()
 
 def vraag16():
@@ -298,13 +302,13 @@ def vraag16():
     if v16=='A':
         einden4()        
     elif v16=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag16()
     elif v16=='B':
         print("Hij had meer man dan jij en je werd naar buiten gezet en je ging dood")
         dood()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag16()
 
 def vraag17():
@@ -314,12 +318,12 @@ def vraag17():
         print("Ook al waren jullie met minder man\nJullie hebben alsnog gewonnen\nJe bent later de vice president geworden en je leeft een goed leven ")
         einden6()        
     elif v17=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag17()
     elif v17=='B'or'C':
         vraag20()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag17()
 
 def vraag18():
@@ -328,13 +332,13 @@ def vraag18():
     if v18=='B':
         einden5()        
     elif v18=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag18()
     elif v18=='A':
         print("Je blijft in de stad zoeken en er zijn 3 mogenlijke plaatsen waar je je familie kan vinden waar ga je naar toe\nA. je huis\nB. het gemeentehuis\nC. de signaaltoren")
         vraag21()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag18()
 
 def vraag19():
@@ -343,13 +347,13 @@ def vraag19():
     if v19=='A':
         einden4()        
     elif v19=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag19()
     elif v19=='B':
         print("Hij had meer man dan jij en je werd naar buiten gezet en je ging dood")
         dood()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag19()
 
 def vraag20():
@@ -358,12 +362,12 @@ def vraag20():
     if v20=='A':
         vraag22()      
     elif v20=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag20()
     elif v20=='B':
         vraag23()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag20()
 
 def vraag21():
@@ -375,12 +379,12 @@ def vraag21():
         print("Je hebt ze niet gevonden waar ga je nu naar toe\nA. je huis\nB. het gemeentehuis")
         vraag21      
     elif v21=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag21()
     elif v21=='B':
         vraag24()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag21()
 
 def vraag22():
@@ -390,12 +394,12 @@ def vraag22():
         print("De truck werd onderzocht en je bent gepakt")
         dood()
     elif v22=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag22()
     elif v22=='B':
         einden3()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag22()
 
 def vraag23():
@@ -405,12 +409,12 @@ def vraag23():
         print("De boot werd onderzocht en je bent gepakt")
         dood()
     elif v23=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag22()
     elif v23=='A':
         einden3()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag23()
 
 def vraag24():
@@ -420,37 +424,43 @@ def vraag24():
         print("De truck werd onderzocht en je bent gepakt")
         dood()
     elif v24=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag22()
     elif v24=='B':
         einden3()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         vraag22()
 
+#Eindes
 def einden2():
     print("Na een paar jaar heb je in Nederland een familie gemaakt en leef je een leuk leven")
     eind2='gehaald'
     eind()
+    return eind2
 
 def einden3():
     print("Je komt veilig aan in Nederland en leeft een lang en leuk leven")
     eind3='gehaald'
     eind()
+    return eind3
 
 def einden4():
     print("Je zit in een werk kamp van de bunker baas\n3 jaar nadat je bent begonnen ben je vrij\nje bent buiten waar alles anders is en je begint met een familie oprichten")
     eind4='gehaald'
     eind()
+    return eind4
 
 def einden5():
     print("Je bent een boer op het platteland\nJe leeft van je eigen planten en hebt niet veel te maken met iedereen anders")
     eind5='gehaald'
     eind()
+    return eind5
 
 def einden6():
     eind6='gehaald'
     eind()
+    return eind6
 
 def eind():
     restart=input("opnieuw spelen? Y/N: ")
@@ -459,10 +469,10 @@ def eind():
     elif restart=='N':
         leven = 0
     elif restart=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag1()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         eind()
 
 def dood():
@@ -473,11 +483,13 @@ def dood():
     elif restart=='N':
         leven = 0
     elif restart=='M':
-        menu(eind1, eind2, eind3, eind4, eind5, eind6)
+        menu(eind1,eind2,eind3,eind4,eind5,eind6)
         vraag1()
     else:
-        print("incorrect input")
+        print("Incorrect input")
         dood()
+    return eind1
 
+#Start code
 if leven==1:
     vraag1()
