@@ -20,10 +20,11 @@ eind6='niet gehaald'
 leven=1
 kans=0
 stemmen=0
+eind=0
 
 #Menu
-def menu(e1,e2,e3,e4,e5,e6):
-    print(str(e1)+" keer dood gegaan\nNederland einde1 "+e2+"\nNederland einde2 "+e3+"\nSlechte baas "+e4+"\nBoer einde "+e5+"\nBaas einde "+e6)
+def menu():
+    print(str(eind1)+" keer dood gegaan\nNederland einde1 "+eind2+"\nNederland einde2 "+eind3+"\nSlechte baas "+eind4+"\nBoer einde "+eind5+"\nBaas einde "+eind6)
     verder=input()
 
 #Stem
@@ -54,7 +55,7 @@ def vraag1():
     if v1=='A':
         vraag2()
     elif v1=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag1()
     elif v1=='B'or'C':
         print("Er is een bom op je huis geland\nEn je hebt het niet overleefd")
@@ -73,7 +74,7 @@ def vraag2():
     elif v2=='C':
         vraag5()
     elif v2=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag2()
     else:
         print("Incorrect input")
@@ -88,7 +89,7 @@ def vraag3():
         print("het is misschien een kleine boot maar")
         vraag7()
     elif v3=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag3()
     else:
         print("Incorrect input")
@@ -106,7 +107,7 @@ def vraag4():
     elif v4=='C':
         vraag8()
     elif v4=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag4()
     else:
         print("Incorrect input")
@@ -123,7 +124,7 @@ def vraag5():
     elif v5=='C':
         vraag10()
     elif v5=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag5()
     else:
         print("Incorrect input")
@@ -141,7 +142,7 @@ def vraag6():
     elif v6=='C':
         vraag11()
     elif v6=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag6()
     else:
         print("Incorrect input")
@@ -156,7 +157,7 @@ def vraag7():
     elif v7=='B':
         vraag12()
     elif v7=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag7()
     else:
         print("Incorrect input")
@@ -173,7 +174,7 @@ def vraag8():
     elif v8=='C':
         vraag5()
     elif v8=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag8()
     else:
         print("Incorrect input")
@@ -192,7 +193,7 @@ def vraag9():
     elif v9=='C':
         vraag14()
     elif v9=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag9()
     else:
         print("Incorrect input")
@@ -208,7 +209,7 @@ def vraag10():
     elif v10=='C':
         vraag17()
     elif v10=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag10()
     else:
         print("Incorrect input")
@@ -227,7 +228,7 @@ def vraag11():
         print("Je valt de piraten aan en wordt dood geschoten")
         dood()
     elif v11=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag11()
     else:
         print("Incorrect input")
@@ -243,7 +244,7 @@ def vraag12():
         print("Je hebt hem aangevallen en bent weg gaan rennen\n na een tijdje zie je hem niet meer en ben je veilig weg")
         einden2()
     elif v12=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag12()
     else:
         print("Incorrect input")
@@ -255,7 +256,7 @@ def vraag13():
     if v13=='A':
         vraag18()        
     elif v13=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag13()
     elif v13=='B'or'C':
         print("Je bent gesnapt en neergeschoten")
@@ -271,7 +272,7 @@ def vraag14():
         print("De groep vindt dat je weg moet")
         dood()        
     elif v14=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag14()
     elif v14=='B':
         print("Goed gezet?")
@@ -288,7 +289,7 @@ def vraag15():
         print("Ook al waren jullie met minder man\nJullie hebben alsnog gewonnen\nJe bent later de president geworden en je leeft een goed leven ")
         einden6()        
     elif v15=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag15()
     elif v15=='B'or'C':
         vraag20()
@@ -302,7 +303,7 @@ def vraag16():
     if v16=='A':
         einden4()        
     elif v16=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag16()
     elif v16=='B':
         print("Hij had meer man dan jij en je werd naar buiten gezet en je ging dood")
@@ -318,7 +319,7 @@ def vraag17():
         print("Ook al waren jullie met minder man\nJullie hebben alsnog gewonnen\nJe bent later de vice president geworden en je leeft een goed leven ")
         einden6()        
     elif v17=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag17()
     elif v17=='B'or'C':
         vraag20()
@@ -332,7 +333,7 @@ def vraag18():
     if v18=='B':
         einden5()        
     elif v18=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag18()
     elif v18=='A':
         print("Je blijft in de stad zoeken en er zijn 3 mogenlijke plaatsen waar je je familie kan vinden waar ga je naar toe\nA. je huis\nB. het gemeentehuis\nC. de signaaltoren")
@@ -347,7 +348,7 @@ def vraag19():
     if v19=='A':
         einden4()        
     elif v19=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag19()
     elif v19=='B':
         print("Hij had meer man dan jij en je werd naar buiten gezet en je ging dood")
@@ -362,7 +363,7 @@ def vraag20():
     if v20=='A':
         vraag22()      
     elif v20=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag20()
     elif v20=='B':
         vraag23()
@@ -379,7 +380,7 @@ def vraag21():
         print("Je hebt ze niet gevonden waar ga je nu naar toe\nA. je huis\nB. het gemeentehuis")
         vraag21      
     elif v21=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag21()
     elif v21=='B':
         vraag24()
@@ -394,7 +395,7 @@ def vraag22():
         print("De truck werd onderzocht en je bent gepakt")
         dood()
     elif v22=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag22()
     elif v22=='B':
         einden3()
@@ -409,7 +410,7 @@ def vraag23():
         print("De boot werd onderzocht en je bent gepakt")
         dood()
     elif v23=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag22()
     elif v23=='A':
         einden3()
@@ -424,7 +425,7 @@ def vraag24():
         print("De truck werd onderzocht en je bent gepakt")
         dood()
     elif v24=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag22()
     elif v24=='B':
         einden3()
@@ -435,61 +436,59 @@ def vraag24():
 #Eindes
 def einden2():
     print("Na een paar jaar heb je in Nederland een familie gemaakt en leef je een leuk leven")
-    eind2='gehaald'
-    eind()
-    return eind2
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 2
 
 def einden3():
     print("Je komt veilig aan in Nederland en leeft een lang en leuk leven")
-    eind3='gehaald'
-    eind()
-    return eind3
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 3
 
 def einden4():
     print("Je zit in een werk kamp van de bunker baas\n3 jaar nadat je bent begonnen ben je vrij\nje bent buiten waar alles anders is en je begint met een familie oprichten")
-    eind4='gehaald'
-    eind()
-    return eind4
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 4
 
 def einden5():
     print("Je bent een boer op het platteland\nJe leeft van je eigen planten en hebt niet veel te maken met iedereen anders")
-    eind5='gehaald'
-    eind()
-    return eind5
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 5
 
 def einden6():
-    eind6='gehaald'
-    eind()
-    return eind6
+    global eind
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 6
 
-def eind():
+def einde():
     restart=input("opnieuw spelen? Y/N: ")
     if restart=='Y':
         vraag1()
     elif restart=='N':
         leven = 0
     elif restart=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
+        menu()
         vraag1()
     else:
         print("Incorrect input")
-        eind()
+        einde()
 
 def dood():
-    restart=input("opnieuw spelen? Y/N: ")
-    eind1=+1
-    if restart=='Y':
-        vraag1()
-    elif restart=='N':
-        leven = 0
-    elif restart=='M':
-        menu(eind1,eind2,eind3,eind4,eind5,eind6)
-        vraag1()
-    else:
-        print("Incorrect input")
-        dood()
-    return eind1
+    listOfGlobals = globals()
+    listOfGlobals['eind'] = 1
 
 #Start code
 if leven==1:
     vraag1()
+    if eind==1:
+        eind1=+1
+    elif eind==2:
+        eind2='gehaald'
+    elif eind==3:
+        eind3='gehaald'
+    elif eind==4:
+        eind4='gehaald'
+    elif eind==5:
+        eind5='gehaald'
+    elif eind==6:
+        eind6='gehaald'
+    einde()
