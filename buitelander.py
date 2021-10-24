@@ -3,13 +3,8 @@ import time
 from os import system, name
 import random
 
-def clear():
-    if name == "nt":
-        _ = system("cls")
-    else:
-        _=system("clear")
-
 #Variable junk
+kans=0
 eind1=0
 eind2='niet gehaald'
 eind3='niet gehaald'
@@ -17,16 +12,17 @@ eind4='niet gehaald'
 eind5='niet gehaald'
 eind6='niet gehaald'
 
-leven=1
-kans=0
-eind=0
-
-#Menu
+#Other defs
 def menu():
     print(str(eind1)+" keer dood gegaan\nNederland einde1 "+eind2+"\nNederland einde2 "+eind3+"\nSlechte baas "+eind4+"\nBoer einde "+eind5+"\nBaas einde "+eind6)
     input()
 
-#Stem
+def clear():
+    if name == "nt":
+        _ = system("cls")
+    else:
+        _=system("clear")
+
 def stem():
     clear()
     print("Je bent een kandidaat")
@@ -44,7 +40,6 @@ def stem():
     elif stemmen<50:
         vraag19()
 
-#start
 def start():
     clear()
     print("Je kan op elk moment M invullen bij een vraag om naar de eindingen te kijken die je hebt gehaalt\nJe kan ook S invullen om het spel stop te zetten")
@@ -65,12 +60,17 @@ def vraag1():
         vraag1()
     elif v1=='S':
         ()
-    elif v1=='B'or'C':
+    elif v1=='B':
+        clear()
+        print("Er is een bom op je huis geland\nEn je hebt het niet overleefd")
+        einden1()
+    elif v1=='C':
         clear()
         print("Er is een bom op je huis geland\nEn je hebt het niet overleefd")
         einden1()
     else:
         print("Incorrect input")
+        input()
         vraag1()
 
 def vraag2():
@@ -90,6 +90,7 @@ def vraag2():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag2()
 
 def vraag3():
@@ -108,6 +109,7 @@ def vraag3():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag3()
 
 def vraag4():
@@ -130,6 +132,7 @@ def vraag4():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag4()
 
 def vraag5():
@@ -151,6 +154,7 @@ def vraag5():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag5()
 
 def vraag6():
@@ -174,6 +178,7 @@ def vraag6():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag6()
 
 def vraag7():
@@ -193,6 +198,7 @@ def vraag7():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag7()
 
 def vraag8():
@@ -214,6 +220,7 @@ def vraag8():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag8()
 
 def vraag9():
@@ -238,6 +245,7 @@ def vraag9():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag9()
 
 def vraag10():
@@ -257,6 +265,7 @@ def vraag10():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag10()
 
 def vraag11():
@@ -281,6 +290,7 @@ def vraag11():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag11()
 
 def vraag12():
@@ -302,6 +312,7 @@ def vraag12():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag12()
 
 def vraag13():
@@ -315,12 +326,17 @@ def vraag13():
         vraag13()
     elif v13=='S':
         ()
-    elif v13=='B'or'C':
+    elif v13=='B':
+        clear()
+        print("Je bent gesnapt en neergeschoten")
+        einden1()
+    elif v13=='C':
         clear()
         print("Je bent gesnapt en neergeschoten")
         einden1()
     else:
         print("Incorrect input")
+        input()
         vraag13()
 
 def vraag14():
@@ -343,6 +359,7 @@ def vraag14():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag14()
 
 def vraag15():
@@ -361,6 +378,7 @@ def vraag15():
         vraag20()
     else:
         print("Incorrect input")
+        input()
         vraag15()
 
 def vraag16():
@@ -381,6 +399,7 @@ def vraag16():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag16()
 
 def vraag17():
@@ -400,6 +419,7 @@ def vraag17():
         vraag20()
     else:
         print("Incorrect input")
+        input()
         vraag17()
 
 def vraag18():
@@ -419,10 +439,11 @@ def vraag18():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag18()
 
 def vraag19():
-    print("Je hebt de electies niet gewonnen en de baas van de bunker is een slecht persoon\nHij maakt het zodat je moet werken om weg to komen\n wat ga je doen\nA. doe wat hij zegt\nB. vecht voor je vrijheid")
+    print("Je hebt de electies niet gewonnen en de baas van de bunker is een slecht persoon\nHij maakt het zodat je moet werken om weg to komen\nWat ga je doen\nA. doe wat hij zegt\nB. vecht voor je vrijheid")
     v19=input()
     if v19=='A':
         clear()
@@ -438,6 +459,7 @@ def vraag19():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag19()
 
 def vraag20():
@@ -455,6 +477,7 @@ def vraag20():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag20()
 
 def vraag21():
@@ -476,6 +499,7 @@ def vraag21():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag21()
 
 def vraag22():
@@ -496,6 +520,7 @@ def vraag22():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag22()
 
 def vraag23():
@@ -516,6 +541,7 @@ def vraag23():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag23()
 
 def vraag24():
@@ -536,12 +562,13 @@ def vraag24():
         ()
     else:
         print("Incorrect input")
+        input()
         vraag22()
 
 #Eindes
 def einden1():
     listOfGlobals = globals()
-    listOfGlobals['eind1'] =+1
+    listOfGlobals['eind1']+=1
     einde()
 
 def einden2():
@@ -584,6 +611,7 @@ def einde():
         vraag1()
     else:
         print("Incorrect input")
+        input()
         einde()
 
 #Start code
