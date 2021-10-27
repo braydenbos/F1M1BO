@@ -42,7 +42,7 @@ def stem():
 
 def start():
     clear()
-    print("Je kan op elk moment M invullen bij een vraag om naar de eindingen te kijken die je hebt gehaalt\nJe kan ook S invullen om het spel stop te zetten")
+    print("Je kan op elk moment M invullen bij een vraag om naar de eindes te kijken die je hebt gehaalt\nJe kan ook S invullen om het spel stop te zetten")
     input()
     vraag1()
 
@@ -317,7 +317,7 @@ def vraag12():
 
 def vraag13():
     clear()
-    print("Je hebt een afleiding gemaakt en word naar een gevangenis gebracht maar je hebt wel de persoon gered\nNa een paar dagen heb je meerdere ontsnappings plannen maar welke ga je kiezen?\nA. ga va het gat\nB. ga graven onder de muur\nC. ga over het hek ")
+    print("Je hebt een afleiding gemaakt en word naar een gevangenis gebracht maar je hebt wel de persoon gered\nNa een paar dagen heb je meerdere ontsnappings plannen maar welke ga je kiezen?\nA. ga via het gat\nB. ga graven onder de muur\nC. ga over het hek ")
     v13=input()
     if v13=='A':
         vraag18()        
@@ -415,7 +415,9 @@ def vraag17():
         vraag17()
     elif v17=='S':
         ()
-    elif v17=='B'or'C':
+    elif v17=='B':
+        vraag20()
+    elif v17=='C':
         vraag20()
     else:
         print("Incorrect input")
